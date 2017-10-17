@@ -3,8 +3,8 @@ let elements =
 
 let div = document.getElementById('modify');
 
-function set()
-{
+var set = function()
+{  
     for(let index = 0; index < elements.length; index++)
 {
         let cssProperty = elements[ index ].getAttribute('id');
@@ -13,6 +13,5 @@ function set()
         
         div.style[cssProperty] = cssValue; 
 }
-}
-document.getElementById('set').addEventListener('click',set);
-
+};
+document.getElementById('bd').addEventListener('change', set);
